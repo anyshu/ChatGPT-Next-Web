@@ -5,8 +5,8 @@ import EmojiPicker, {
 } from "emoji-picker-react";
 
 import { ModelType } from "../store";
-
-import BotIcon from "../icons/bot.svg";
+// 20230905-01  修改聊天页面icon
+import BotIcon from "../icons/zenmen_logo_small.svg";
 import BlackBotIcon from "../icons/black-bot.svg";
 
 export function getEmojiUrl(unified: string, style: EmojiStyle) {

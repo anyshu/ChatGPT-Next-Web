@@ -5,12 +5,13 @@ import styles from "./home.module.scss";
 import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
 import GithubIcon from "../icons/github.svg";
-import ChatGptIcon from "../icons/chatgpt.svg";
+// 20230904-06 换icon
+// import ChatGptIcon from "../icons/chatgpt.svg";
+import ChatGptIcon from "../icons/zenmen_logo.svg"
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
-import DragIcon from "../icons/drag.svg";
 
 import Locale from "../locales";
 
@@ -118,7 +119,9 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          ChatGPT Next
+          {/* 20230904-05 hc 修改
+          ChatGPT Next */}
+          ZenmenAI Future
         </div>
         <div className={styles["sidebar-sub-title"]}>
           Build your own AI assistant.
@@ -173,11 +176,12 @@ export function SideBar(props: { className?: string }) {
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
           </div>
-          <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
+          {/* 20230904-01 hc remove */}
+          {/* <div className={styles["sidebar-action"]}>
+            <a href={REPO_URL} target="_blank">
               <IconButton icon={<GithubIcon />} shadow />
             </a>
-          </div>
+          </div> */}
         </div>
         <div>
           <IconButton
@@ -199,9 +203,7 @@ export function SideBar(props: { className?: string }) {
       <div
         className={styles["sidebar-drag"]}
         onMouseDown={(e) => onDragMouseDown(e as any)}
-      >
-        <DragIcon />
-      </div>
+      ></div>
     </div>
   );
 }
